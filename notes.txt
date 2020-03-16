@@ -1,0 +1,2 @@
+server.ejs  -> app.js
+routes/main.js		-> routes/index.js
