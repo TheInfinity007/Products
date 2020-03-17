@@ -4,4 +4,4 @@ This is a basic Node.js app created for learning the pagination feature on a web
 
 The Technologies used are Node.js, MongoDB, Express and EJS
 
-The data is retrieved from using the Faker.js
+The data is retrieved from using the <h1>Faker.js</h1>
