@@ -1,7 +1,7 @@
 # Products_Gallery
 
-This is a basic Node.js app created for learning the <em>pagination feature</em> on a website.<br>
-The Technologies used are<em> Node.js, MongoDB, Express and EJS<em><br>
+This is a basic Node.js app created for learning the <strong><em>pagination feature</em></strong> on a website.<br>
+The Technologies used are<strong><em> Node.js, MongoDB, Express and EJS<em></strong><br>
 The data is retrieved from using the Faker.js
 
 <h4>Routes</h4>
