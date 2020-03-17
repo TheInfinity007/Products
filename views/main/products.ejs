@@ -1,1 +1,69 @@
-products
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap 3 cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<% products.forEach((product)=>{ %>
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img src="<%= product.cover %>">
+						<div class="caption">
+							<h3><%= product.name %></h3>
+							<p><%= product.category %></p>
+							<p>$<%= product.price %></p>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+
+	<% if(pages > 0){ %>
+	<ul class="pagination text-center">
+		<% if(current == 1){%>
+			<li class="disabled"><a>First</a></li>
+		<% }else{%>
+			<li><a href="/products/1">First</a></li>
+		<% }%>
+
+		<% var i = (Number(current) > 5) ? Number(current) - 4 : 1 %>
+
+		<% if( i !== 1 ){ %>
+			<li class="disabled"><a>...</a></li>
+		<% } %>
+		<% for(; i <= (Number(current)+4) && i <= pages; i++){ %>
+			<% if(i == current){ %>
+				<li class="active"><a><%= i %></a></li>
+			<% }else{ %>
+				<li><a href="/products/<%= i %>"><%= i %></a></li>
+			<% } %>
+
+			<% if( i == Number(current)+4 && i < pages){ %>
+				<li class="disabled"><a>...</a></li>
+			<% } %>
+		<% } %>
+
+		<% if(current == pages){ %>
+			<li class="disabled"><a href="">Last</a></li>
+		<%}else{%>
+			<li><a href="/products/<%= pages %>">Last</a></li>
+		<%}%>
+
+
+
+	</ul>
+	<% } %>
+
+
+
+
+
+</body>
+</html>
